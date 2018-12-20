@@ -1,0 +1,19 @@
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>
+      Product page
+    </title>
+
+  </head>
+  <body>
+    <% if products.nil? %>
+      <h1>Ваш товар не найден!</h1>
+    <% else %>
+      <p>Название: <%= products[:title] %></p>
+      <p>Описание: <%= products[:about] %></p>
+      <p>Цена: <%= products[:price] %>$</p>
+    <% end %>
+    <a href="/products">Вернуться к списку товаров</a>
+  </body>
+</html>
